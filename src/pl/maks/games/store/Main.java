@@ -19,13 +19,17 @@ public class Main {
             System.out.println("5. Usuń gre");
             System.out.println("6. Kup gre");
             System.out.println("0. Wyjdź");
-            p = sc.nextInt();
-            sc.nextLine();
-            if (p > 6 || p < 0) {
-                System.out.println("Wybierz poprawną opcję!");
+            try {
+                p = sc.nextInt();
+                if (p > 6 || p < 0) System.out.println("Wybierz cyfrę od 0 do 6");
+            } catch (Exception e) {
+                System.out.println("Wybierz cyfrę od 0 do 6");
             }
+            sc.nextLine();
+
             switch (p){
                 case 1:
+//                    shop.createTable();
                     shop.show_data();
                     break;
 

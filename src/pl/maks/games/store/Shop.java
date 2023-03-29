@@ -24,6 +24,10 @@ public class Shop {
         return code;
     }
 
+    public void createTable() {
+        db.createTable(conn,table_name);
+    }
+
     public void show_data(){
         db.read_data(conn,table_name);
     }
